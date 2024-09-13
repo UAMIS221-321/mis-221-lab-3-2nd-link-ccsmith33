@@ -1,5 +1,6 @@
 ﻿Console.Clear();
 string stadium = GetEnjoymentLevel();
+stadium = GetStadiumRecommendations(stadium);
 
 string gameRecommendations = GetGameRecommendations(stadium);
 
@@ -11,7 +12,8 @@ static string GetEnjoymentLevel(){
 Console.WriteLine("\nEnter your enjoyment level: Boring, Average, Fun, or Epic");
 
 string enjoymentLevel = Console.ReadLine();
-if (enjoymentLevel.ToLower() != "boring" ||enjoymentLevel.ToLower() != "average"||enjoymentLevel.ToLower() !="fun"||enjoymentLevel.ToLower() !="epic"){
+if (enjoymentLevel.ToLower() != "boring" && enjoymentLevel.ToLower() != "average"&& enjoymentLevel.ToLower() !="fun" && enjoymentLevel.ToLower() !="epic"){
+    Console.Clear();
     Console.WriteLine("That is not a valid selection, please enter a valid input");
     enjoymentLevel = GetEnjoymentLevel();
 }
